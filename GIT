@@ -1,0 +1,42 @@
+1. 在自己的项目文件目录下初始化git：
+
+```
+ git init
+```
+
+1. 将自己项目文件(夹)添加至git：
+
+```
+git add file1 file2 ...
+```
+
+1. (确认提交已添加的文件(夹)，“xxx”表示提交时的评注：
+
+```
+git commit -m "add your comment here :D"
+```
+
+1. 设置自己的账户(参数`--global`为设置全局账户，这样在新建其他项目时不再需要设置账户)：
+
+```
+git config --global user.email "email@example.com"
+git config --global user.name "your name"
+```
+
+1. 在GitHub新建一个存储库**注意:不要勾选“用自述文件初始化这个存储库”！**
+2. 在新建的存储库的设置中添加ssh密钥。*(在linux下，先查看)`~/.ssh`目录是否存在`id_rsa` 和 `id_rsa.pub`、若没有，则使用命令：`ssh-keygen -t rsa -C "email@example.com".`生成.若存在，则`cat id_rsa.pub`(即可)*
+3. 将本地的库添加至远程库，并指定该远程库名为起源：
+
+```
+git remote add origin git@github.com:https://github.com/LUO877562830/IEEEagent-RL.git
+```
+
+1. 确认提交远程库下的主分支：
+
+```
+git push origin master
+```
+
+1. 再次提交重复步骤2/3/8即可。
+
+更多详细教程请参阅：[Https://www.liaoxuefeng.com/wiki/896043488029600/896067008724000](https://www.liaoxuefeng.com/wiki/896043488029600/896067008724000)
